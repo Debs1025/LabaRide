@@ -1,0 +1,20 @@
+CREATE DATABASE IF NOT EXISTS LabaRide_DB;
+USE LabaRide_DB;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    birthdate DATE,
+    gender VARCHAR(10),
+    zone VARCHAR(255),
+    street VARCHAR(255),
+    barangay VARCHAR(255),
+    building VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+select * from users;
